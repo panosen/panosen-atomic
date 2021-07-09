@@ -81,7 +81,7 @@ namespace Panosen.Atomic
         /// </summary>
         public bool CompareAndSet(int index, T expect, T update)
         {
-            lock (this)
+            lock (this.array)
             {
                 if (this.array[index].Equals(expect))
                 {
