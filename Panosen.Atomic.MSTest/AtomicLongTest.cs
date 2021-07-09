@@ -14,7 +14,7 @@ namespace Panosen.Atomic.MSTest
             int value = 0;
             AtomicLong value2 = 0;
 
-            int x = 20;
+            int x = 50;
             int y = 1000;
 
             List<Task> tasks = new List<Task>();
