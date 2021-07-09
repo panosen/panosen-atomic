@@ -7,7 +7,6 @@ namespace Panosen.Atomic
     /// <summary>
     /// 原子long
     /// </summary>
-    [Serializable]
     public class AtomicLong : IFormattable
     {
         private long longValue;

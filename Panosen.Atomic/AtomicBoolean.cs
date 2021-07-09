@@ -7,7 +7,6 @@ namespace Panosen.Atomic
     /// <summary>
     /// 原子boolean
     /// </summary>
-    [Serializable]
     public class AtomicBoolean : IFormattable
     {
         private volatile int booleanValue;

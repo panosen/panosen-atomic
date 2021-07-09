@@ -9,7 +9,6 @@ namespace Panosen.Atomic
     /// <summary>
     /// 原子int数组
     /// </summary>
-    [Serializable]
     public class AtomicIntegerArray : AtomicReferenceArray<int>
     {
         /// <summary>

@@ -7,8 +7,6 @@ namespace Panosen.Atomic
     /// <summary>
     /// 原子引用
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    [Serializable]
     public class AtomicReference<T> where T : class
     {
         private volatile T reference;

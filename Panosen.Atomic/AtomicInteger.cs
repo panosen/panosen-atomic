@@ -7,7 +7,6 @@ namespace Panosen.Atomic
     /// <summary>
     /// 原子int
     /// </summary>
-    [Serializable]
     public class AtomicInteger : IFormattable
     {
         private volatile int integerValue;

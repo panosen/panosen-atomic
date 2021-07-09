@@ -8,7 +8,6 @@ namespace Panosen.Atomic
     /// <summary>
     /// 原子引用数组
     /// </summary>
-    [Serializable]
     public class AtomicReferenceArray<T>
     {
         private readonly T[] array;
@@ -38,7 +37,9 @@ namespace Panosen.Atomic
         public AtomicReferenceArray(T[] array)
         {
             if (array == null)
+            {
                 throw new ArgumentNullException("array");
+            }
 
             this.array = new T[array.Length];
             Array.Copy(array, 0, this.array, 0, array.Length);
@@ -50,7 +51,9 @@ namespace Panosen.Atomic
         public AtomicReferenceArray(IEnumerable<T> items)
         {
             if (items == null)
+            {
                 throw new ArgumentNullException("items");
+            }
 
             this.array = items.ToArray();
         }
