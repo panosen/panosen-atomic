@@ -11,8 +11,7 @@ namespace Panosen.Atomic.MSTest
         [TestMethod]
         public void TestMethod1()
         {
-            int value = 0;
-            AtomicInteger value2 = 0;
+            AtomicInteger value = 0;
 
             int x = 40;
             int y = 1000;
@@ -25,8 +24,7 @@ namespace Panosen.Atomic.MSTest
                 {
                     for (int i = 0; i < y; i++)
                     {
-                        value++;
-                        value2.GetAndIncrement();
+                        value.GetAndIncrement();
                     }
                 });
 
@@ -35,8 +33,7 @@ namespace Panosen.Atomic.MSTest
 
             Task.WaitAll(tasks.ToArray());
 
-            Assert.AreNotEqual(x * y, value);
-            Assert.AreEqual(x * y, value2.Value);
+            Assert.AreEqual(x * y, value.Value);
         }
     }
 }
